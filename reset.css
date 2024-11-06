@@ -1,0 +1,33 @@
+// Inicialização do Swiper para o carrossel de jogos
+const swiper = new Swiper('.swiper', {
+    // Espaçamento entre os slides (jogos)
+    spaceBetween: 10,
+    // Número de jogos visíveis por vez
+    slidesPerView: 3,
+    // Configuração de paginação com bullets para navegação fácil
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true,
+    },
+    // Configurações de navegação (botões de próxima e anterior)
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    // Pontos de quebra para responsividade, adaptando a exibição para diferentes telas
+    breakpoints: {
+        // Para telas menores que 640px, exibir 1 jogo por vez
+        640: {
+            slidesPerView: 1,
+        },
+        // Para telas entre 640px e 1024px, exibir 2 jogos por vez
+        768: {
+            slidesPerView: 2,
+        },
+        // Para telas maiores que 1024px, exibir 3 jogos por vez
+        1024: {
+            slidesPerView: 3,
+        },
+    },
+});
